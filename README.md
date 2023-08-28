@@ -11,4 +11,4 @@ Manage borrowing records, allowing librarians to check out books for patrons and
 Handle book returns and update availability status accordingly.
 Generate overdue reports to help with book management.
 Basic authentication system to ensure secure access for librarians.
-This project provides a user-friendly interface with menu options for easy navigation and utilizes file handling to store and retrieve data. It demonstrates the use of modular programming and structuring code effectively...
+This project provides a user-friendly interface with menu options for easy navigation and utilizes file handling to store and retrieve data. It demonstrates the use of modular programming and structuring code effectively.
