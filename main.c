@@ -10,7 +10,6 @@ struct Book {
     int isbn;
     int available;
 };
-
 struct Book library[MAX_BOOKS];
 int numBooks = 0;
 
@@ -19,7 +18,6 @@ void addBook() {
         printf("The library is full. Cannot add more books.\n");
         return;
     }
-
     struct Book newBook;
     printf("Enter the title of the book: ");
     fgets(newBook.title, sizeof(newBook.title), stdin);
@@ -32,13 +30,11 @@ void addBook() {
     library[numBooks++] = newBook;
     printf("Book added successfully!\n");
 }
-
 void displayBooks() {
     if (numBooks == 0) {
         printf("No books in the library.\n");
         return;
     }
-
     printf("Books in the library:\n");
     printf("-------------------------------\n");
     for (int i = 0; i < numBooks; i++) {
@@ -49,7 +45,6 @@ void displayBooks() {
         printf("-------------------------------\n");
     }
 }
-
 int searchBookByTitle(const char* title) {
     for (int i = 0; i < numBooks; i++) {
         if (strcmp(library[i].title, title) == 0) {
@@ -58,7 +53,6 @@ int searchBookByTitle(const char* title) {
     }
     return -1;
 }
-
 void deleteBook() {
     char searchTitle[100];
     printf("Enter the title of the book to delete: ");
@@ -69,7 +63,6 @@ void deleteBook() {
         printf("Book not found.\n");
         return;
     }
-
     // Shift books to the left to cover the deleted book
     for (int i = bookIndex; i < numBooks - 1; i++) {
         library[i] = library[i + 1];
@@ -77,7 +70,6 @@ void deleteBook() {
     numBooks--;
     printf("Book deleted successfully!\n");
 }
-
 int main() {
     int choice;
     do {
@@ -89,7 +81,6 @@ int main() {
         printf("Enter your choice: ");
         scanf("%d", &choice);
         getchar(); // Clear the newline character from the input buffer
-
         switch (choice) {
             case 1:
                 addBook();
